@@ -1,27 +1,26 @@
 # Test3it
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Proyecto realizado para mi presentación a la vacante de desarrollador UI a pedido de 3IT.
 
-## Development server
+Este proyecto fue realizado con:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+HTML: v5
+CSS: v3
+bootstrap: v5.1.3
+NodeJS: v16.13.1
+Angular: v13.1.2
+iconos: https://feathericons.com/ 
 
-## Code scaffolding
+## Instalación
+***
+Para poder instalar este proyecto, debe tener instalado la version de Angular CLI, luego descargar este repositorio y una vez abierto en su procesador de texto de preferencia, puede digitar:
+```
+$ ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Comentarios
+1. Este proyecto estara disponible en la pagina www.demasas.cl, hasta el día 5 de Enero de 2022. Si desea ver este proyecto en linea, favor de escribir un correo electronico a jero@santamariai.cl solicitando su carga.
+2. Me hubiese podido contar con mas tiempo para realizar el trabajo, desgraciadamente tuve problemas con realizar la carga dinamica de la información de la API, asi que terminé haciendolo de forma manual. Por su puesto que hay formas mas eficientes para cargarlas, pueden ver ejemplos de ello en mis repositorios, recomiendo Starwars Blog hecho con React (https://github.com/jerosantamariai/starwarsblog).
+3. Esta aplicación tiene una version mobile y desktop.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Al equipo de 3IT, muchas gracias por la oportunidad.

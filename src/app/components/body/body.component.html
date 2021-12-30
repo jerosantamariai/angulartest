@@ -1,1 +1,671 @@
-<p>body works!</p>
+<!-- <div *ngIf="indicador">
+    <p>{{indicador.nombre}}</p>
+</div> -->
+
+
+<ul>
+    <li *ngFor="let element of (indicador | json)">
+
+    </li>
+</ul>
+<pre>
+ 
+</pre>
+
+
+<section class="contenedor-bch d-none d-md-block">
+
+    <h1 class="mt-2">Titulo</h1>
+
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <h2>titulo caja</h2>
+            <h3 class="card-title">Card title</h3>
+<div  >
+
+</div>
+
+            
+            <div class="container mr-2 my-4">
+                <div class="card-body bg-white">
+                    <p>hola</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="busqueda-bch mb-4">
+    <!-- version desktop -->
+    <div class="accordion d-none d-md-block" id="myAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button type="button" class="accordion-button c-white bg-bch_1 collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne">Texto</button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="card-body pb-5">
+                    <div class="d-flex jc-sb">
+                        <div class="form-group calendario-bch w-50 mx-4">
+                            <div class="form-input mt-3">
+                                <input class="form-control bg-white" type="date" value="" id="" onchange=""
+                                    name="busqueda-fecha__inicio" min="">
+                            </div>
+                        </div>
+                        <div class="form-group calendario-bch w-50">
+                            <div class="form-input mt-3">
+                                <input type="date" class="form-control bg-white" value="" id=""
+                                    name="busqueda-fecha__fin" min="">
+                            </div>
+                        </div>
+                        <div class="dropdown mt-3 mx-4">
+                            <button class="btn dropdown-toggle text-start mb-0 bg-white" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="input-busqueda-bch">
+                        <div class="form-floating w-75 my-3 mx-4">
+                            <input type="email" class="form-control bg-white" id="floatingInput"
+                                placeholder="Búsqueda General...">
+                            <label for="floatingInput">Búsqueda General...</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-buscar-bch c-white float-end">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- version mobile -->
+    <div class="busqueda-mobile d-block d-md-none">
+        <div id="indicador1" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="bg-bch_1 c-white">
+                        <h2 class="py-2 px-3 mb-0">Indicadores</h2>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorUF.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorUF.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next primero" type="button" data-bs-target="#indicador1"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador1"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Bitcoin</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> {{ this.fecha }}</h3>
+                        <h3 class="mb-0">${{ this.valor }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="indicador2" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorDolar.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorDolar.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indicador2"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador2"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Dolar</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="indicador3" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorBitcoin.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorBitcoin.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indicador3"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador3"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Dolar</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="indicador4" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorUtm.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorUtm.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indicador4"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador4"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Dolar</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="indicador5" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorEuro.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorEuro.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indicador5"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador5"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Dolar</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="indicador6" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between align-items-center px-3 border-top border-bottom">
+                        <div class="mt-2">
+                            <h3>
+                                {{ this.indicadorIpc.codigo }}
+                            </h3>
+                            <p class="c-green_bch">
+                                {{ this.indicadorIpc.unidad_medida }}
+                            </p>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indicador6"
+                            data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="#008500" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-alert-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-bch_1 c-white d-flex align-items-center justify-content-around">
+                        <div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#indicador6"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <h2 class="py-2 mb-0">Indicadores</h2>
+                        </div>
+                        <h3 class=" busqueda-mobile__indicador mb-0">Dolar</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 border-top border-bottom">
+                        <h3 class="c-green_bch mt-2"> 2020-12-15</h3>
+                        <h3 class="mb-0">$ 899</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="tabla-bch d-none d-md-block">
+    <i class="fas fa-arrow-left c-bch_1" style="font-size: 1rem !important;"></i>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Indicador</th>
+                    <th scope="col">Unidad de medida</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Autor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorUF.codigo }} </td>
+                    <td> {{ this.indicadorUF.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorUF.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorDolar.codigo }} </td>
+                    <td> {{ this.indicadorDolar.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorDolar.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorIvp.codigo }} </td>
+                    <td> {{ this.indicadorIvp.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorIvp.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorEuro.codigo }} </td>
+                    <td> {{ this.indicadorEuro.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorEuro.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorIpc.codigo }} </td>
+                    <td> {{ this.indicadorIpc.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> {{ this.valor }} % </td>
+                    <td> {{ this.indicadorIpc.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorTpm.codigo }} </td>
+                    <td> {{ this.indicadorTpm.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> {{ this.valor }} % </td>
+                    <td> {{ this.indicadorTpm.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorLibraCobre.codigo }} </td>
+                    <td> {{ this.indicadorLibraCobre.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorLibraCobre.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorDolarIntercambio.codigo }} </td>
+                    <td> {{ this.indicadorDolarIntercambio.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> $ {{ this.valor }} </td>
+                    <td> {{ this.indicadorDolarIntercambio.autor }} </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        </div>
+                    </th>
+                    <td> {{ this.indicadorTasaDesempleo.codigo }} </td>
+                    <td> {{ this.indicadorTasaDesempleo.unidad_medida }} </td>
+                    <td> {{ this.fecha }} </td>
+                    <td> {{ this.valor }} % </td>
+                    <td> {{ this.indicadorTasaDesempleo.autor }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="paginador-bch my-4 d-none d-md-block">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modal-mobile" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal mobile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

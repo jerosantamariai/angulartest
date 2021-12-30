@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    font-size: 0.875rem !important;
+    font-family: Roboto !important;
+}
+h1{
+    font-size: 1.75rem !important;
+    font-family: Roboto Condensed !important;
+    color: rgba(1, 28, 77, 1);
+}
+h2{
+    font-size: 1.25rem !important;
+    font-family: Roboto !important;
+}
+h3{
+    font-size: 1.125rem !important;
+    font-family: Roboto !important;
+}
+tbody{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.bg-bch{
+    background: #002464;
+}
+section{
+    margin: auto 3.5rem;
+}
+.bg-white{
+    background-color: white !important;
+}
+.bg-bch_1{
+    background-color: #0166D5 !important;
+}
+.c-white{
+    color: white !important;
+}
+.c-bch_1{
+    color: #002464 !important
+}
+.c-green_bch{
+    color: #176517;
+}
+.contenedor-bch .card-body{
+    border: solid 1px rgba(1, 28, 77, 1);
+}
